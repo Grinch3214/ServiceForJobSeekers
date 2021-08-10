@@ -22,7 +22,9 @@
           </b-badge>
         </div>
         <h5>Юрий Ивашин</h5>
-        <p class="mb-25">Front-end Developer.</p>
+        <p class="mb-25">
+          Front-end Developer.
+        </p>
         <p>HTML/CSS coder</p>
         <div class="d-flex align-items-center">
           <feather-icon icon="MapPinIcon" />
@@ -57,8 +59,12 @@
     </div>
     <div class="row mt-2">
       <div class=" col-4 col-sm-2">
-        <p class="text-muted">Опыт работы:</p>
-        <p class="text-muted">5 лет</p>
+        <p class="text-muted">
+          Опыт работы:
+        </p>
+        <p class="text-muted">
+          5 лет
+        </p>
       </div>
       <div class="col-8 col-sm-10">
         Customer Support Specialist 5CA Full-time Full-time Jun 2018 – Nov 2020 (2 рiк 5 months) Project Manager Computools Full-time Full-time Mar 2018 – Apr 2019 (1 рiк 1 міс.) Gaming Support Agent Aventador Full-time Full-time Sep 2016 – Feb 2018 (1 рiк 5 months)
@@ -67,21 +73,37 @@
 
     <div class="row mt-2">
       <div class=" col-4 col-sm-2">
-        <p class="text-muted">Резюме:</p>
+        <p class="text-muted">
+          Резюме:
+        </p>
       </div>
       <div class="col-8 col-sm-10">
-        <p class="mb-25">Working with cross-functional teams;</p>
-        <p class="mb-25">Working under pressure;</p>
-        <p class="mb-25">Customer Support Specialist</p>
-        <p class="mb-25">Working with cross-functional teams;</p>
-        <p class="mb-25">Working under pressure;</p>
-        <p class="mb-25">Customer Support Specialist</p>
+        <p class="mb-25">
+          Working with cross-functional teams;
+        </p>
+        <p class="mb-25">
+          Working under pressure;
+        </p>
+        <p class="mb-25">
+          Customer Support Specialist
+        </p>
+        <p class="mb-25">
+          Working with cross-functional teams;
+        </p>
+        <p class="mb-25">
+          Working under pressure;
+        </p>
+        <p class="mb-25">
+          Customer Support Specialist
+        </p>
       </div>
     </div>
 
     <div class="row mt-2">
       <div class=" col-4 col-sm-2">
-        <p class="text-muted">Контакты:</p>
+        <p class="text-muted">
+          Контакты:
+        </p>
       </div>
       <div class="col-8 col-sm-10">
         <p><span class="text-muted">Email:</span> ivashyn.yurii@gmail.com</p>

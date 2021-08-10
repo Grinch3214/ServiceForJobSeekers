@@ -21,7 +21,7 @@
           placeholder="Например JS Javascript"
         />
       </b-form-group>
-      <div class="col-12 col-md-2 order-4 order-md-3 mb-3 mb-md-0">
+      <div class="col-12 col-md-2 order-4 order-md-3 mb-3 mb-md-0 text-right">
         <b-button
           v-ripple.400="'rgba(255, 255, 255, 0.15)'"
           variant="warning"
@@ -101,11 +101,11 @@
       ok-title="Accept"
       centered
       size="lg"
-      hide-header
       hide-footer
+      class="pr-0"
     >
       <div class="row mt-3">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 order-1">
           <b-form-group
             label-for="positionInput"
           >
@@ -116,7 +116,7 @@
           </b-form-group>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 order-2">
           <b-form-group
             label-for="skillInput"
           >
@@ -127,7 +127,7 @@
           </b-form-group>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 order-3">
           <b-form-group
             label-for="workLabel"
           >
@@ -138,31 +138,27 @@
           </b-form-group>
         </div>
 
-        <div class="col-12 col-md-4" />
-
-        <div class="col-12 col-md-4">
+        <div class="offset-md-4 col-12 col-md-4 order-4">
           <b-form-checkbox
             v-model="selectedFilters"
             value="topSkills"
-            class="mb-3"
+            class="mb-1 mb-md-3"
           >
             Только ТОП навыки
           </b-form-checkbox>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 order-5">
           <b-form-checkbox
             v-model="selectedFilters"
             value="nowWork"
-            class="mb-3"
+            class="mb-1 mb-md-3"
           >
             Только текущее место работы
           </b-form-checkbox>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6 order-6">
           <h5 class="mb-2">
             Опыт работы, лет</h5>
           <p>От {{ skill[0] }} до {{ skill[1] }}</p>
@@ -173,30 +169,9 @@
             :direction="direction"
             class="mb-2"
           />
-          <div>
-            <b-form-group
-              label="Endorsements:"
-              label-for="globalSearchInput"
-              label-class="h5"
-            >
-              <b-form-input
-                id="globalSearchInput"
-                placeholder="Поиск"
-              />
-            </b-form-group>
-          </div>
-          <div>
-            <b-form-checkbox-group
-              v-model="endorsements"
-              :options="endorsementsOptions"
-              value-field="item"
-              text-field="name"
-              stacked
-              class="mb-1 child-mb-1"
-            />
-          </div>
         </div>
-        <div class="col-6">
+
+        <div class="col-12 col-md-6 order-7">
           <h5 class="mb-2">
             На последнем месте работы</h5>
           <p>От {{ lastWork[0] }} до {{ lastWork[1] }}</p>
@@ -207,6 +182,23 @@
             :direction="direction"
             class="mb-2"
           />
+        </div>
+
+        <div class="col-12 col-md-6 order-8">
+          <b-form-group
+            label="Endorsements:"
+            label-for="globalSearchInput"
+            label-class="h5"
+          >
+            <b-form-input
+              id="globalSearchInput"
+              v-model="searchCheckBox"
+              placeholder="Поиск"
+            />
+          </b-form-group>
+        </div>
+
+        <div class="col-12 col-md-6 order-10 order-md-9">
           <h5 class="mb-1">
             Дополнительно:</h5>
           <b-form-checkbox
@@ -224,6 +216,35 @@
             Хороший уровень английского
           </b-form-checkbox>
         </div>
+
+        <div class="col-12 col-md-6 order-9 order-md-10">
+          <b-form-checkbox-group
+            v-model="endorsements"
+            :options="endorsementsOptions"
+            value-field="item"
+            text-field="name"
+            stacked
+            class="mb-1 child-mb-1"
+          />
+        </div>
+
+        <div class="col-12 d-md-none order-11">
+          <b-button
+            v-ripple.400="'rgba(255, 255, 255, 0.15)'"
+            variant="warning"
+            class="mr-1 mb-1"
+          >
+            Применить
+          </b-button>
+          <b-button
+            v-ripple.400="'rgba(255, 159, 67, 0.15)'"
+            variant="outline-warning"
+            class="mr-1 mb-1"
+          >
+            Отмена
+          </b-button>
+        </div>
+
       </div>
     </b-modal>
   </div>
@@ -255,6 +276,7 @@ export default {
   },
   data() {
     return {
+      searchCheckBox: '',
       selected: ['B'],
       selectedFilters: ['nowWork'],
       lastWork: [0, 1],

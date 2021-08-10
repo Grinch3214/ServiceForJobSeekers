@@ -160,7 +160,7 @@
 
 @media (max-width: 576px) {
   .modal {
-    padding-right: 1rem;
+    padding-right: 0rem; //какая-то хуйня, пока что убираю 1rem, т.к. в стилях вешается pl-0 на этом брэкпоинте
     padding-left: 1rem;
     .modal-xs,
     .modal-sm {
